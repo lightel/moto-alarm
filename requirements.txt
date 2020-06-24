@@ -1,0 +1,4 @@
+opencv-python==4.2.0.34
+tensorflow==2.2.0
+scikit-image==0.17.2
+ipython=7.15.0
