@@ -12,3 +12,7 @@ Steps to run:
 * Checkout the branch **tensorflow-2.0** of Mask_RCNN repository
 * Run `python setup.py install` in Mask_RCNN
 * Finally run `python moto_alarm.py` in the root of this repository
+
+# Sample
+
+![](samples/result_from_sample1.jpg)
