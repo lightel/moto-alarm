@@ -16,4 +16,4 @@ Steps to run:
 
 # Sample
 
-![](samples/result_from_sample1.jpg)
+![](assets/result_from_sample1.jpg)

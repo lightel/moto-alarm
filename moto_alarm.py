@@ -12,7 +12,7 @@ from mrcnn.model import MaskRCNN
 from mrcnn import visualize
 from pathlib import Path
 
-VIDEO_SOURCE = "./samples/sample1.mp4" # put here URL to the video stream
+VIDEO_SOURCE = "./assets/sample1.mp4" # put here URL to the video stream
 
 ###########################################################################################################################
 # Configuration that will be used by the Mask-RCNN library
@@ -119,7 +119,7 @@ while True:
     
     # Convert the image from BGR color (which OpenCV uses) to RGB color
     rgb_image = frame[:, :, ::-1]
-
+    
     # Run the image through the Mask R-CNN model to get results.
     results = model.detect([rgb_image], verbose=0)
 
@@ -144,13 +144,11 @@ while True:
     # Draw green rectangles around motorcycles
     for box in motorcycle_boxes:
         y1, x1, y2, x2 = box
-
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 1)
 
     # Draw red rectangles around other objects
     for box in other_objects_boxes:
         y1, x1, y2, x2 = box
-
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 1)
 
     # See how much those objects overlap with the motorcycles
@@ -159,10 +157,10 @@ while True:
     # Assume no overlaps with motorcyles
     is_overlap_detected = False
 
-    for motorcycle_box, overlap_areas in zip(motorcycle_boxes, overlaps):
+    for overlap in overlaps:
         # For this motorcycle, find the max amount it was covered by any
         # other objects  that was detected in our image
-        max_IoU_overlap = np.max(overlap_areas)
+        max_IoU_overlap = np.max(overlap)
         print("Max overlap: ", max_IoU_overlap)
         if max_IoU_overlap > 0.2:
             is_overlap_detected = True
