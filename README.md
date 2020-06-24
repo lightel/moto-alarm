@@ -5,3 +5,10 @@ Every motorcycle owner gets a bit nervous when people touch their toy without as
 Limitations:
 * The algorithm detects all the motorcycles on the video frame. To recognize a specific motorcyle only need to train the custom model.
 * This tool is very slow. It takes about 5 seconds to detect objects for a single frame.
+
+Steps to run:
+* Clone this repository
+* Clone repository https://github.com/tomgross/Mask_RCNN
+* Checkout the branch **tensorflow-2.0** of Mask_RCNN repository
+* Run `python setup.py install` in Mask_RCNN
+* Finally run `python moto_alarm.py` in the root of this repository
