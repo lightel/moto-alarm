@@ -4,7 +4,7 @@ Every motorcycle owner gets a bit nervous when people touch their toy without as
 
 Limitations:
 * The algorithm detects all the motorcycles on the video frame. To recognize a specific motorcyle only need to train the custom model.
-* This tool is very slow. It takes about 5 seconds to detect objects for a single frame.
+* This tool is very slow. It takes about 5 seconds to process a single frame on a regular laptop (Intel Core i5).
 
 Steps to run:
 * Clone this repository
