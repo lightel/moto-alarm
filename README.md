@@ -10,7 +10,8 @@ Steps to run:
 * Clone this repository
 * Clone repository https://github.com/tomgross/Mask_RCNN
 * Checkout the branch **tensorflow-2.0** of Mask_RCNN repository
-* Run `python setup.py install` in Mask_RCNN
+* Run `python setup.py install` in Mask_RCNN repository
+* Run `pip install -r requirements.txt` in the root of this repository
 * Finally run `python moto_alarm.py` in the root of this repository
 
 # Sample
