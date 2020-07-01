@@ -132,3 +132,4 @@ dmypy.json
 images/
 logs/
 mask_rcnn_coco.h5
+yolov3.weights
