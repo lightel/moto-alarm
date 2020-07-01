@@ -63,7 +63,6 @@ def getIoU(boxA, boxB):
     iou = interArea / float(boxAArea + boxBArea - interArea)
 
     # return the intersection over union value
-    if (iou>0):
         return iou
 
 ###########################################################################################################################
